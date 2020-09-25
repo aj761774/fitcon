@@ -586,14 +586,7 @@
 
 const services = document.getElementById('services');
 const serviceOptions = document.getElementById('serviceOptions');
-services.addEventListener( 'mouseover',()=>{
-    if( serviceOptions.style.display == 'block'){
-        serviceOptions.style.display = 'none';
-    }
-    else{
-        serviceOptions.style.display = 'block';
-    }
-});
+
 services.addEventListener( 'click',()=>{
     if( serviceOptions.style.display == 'block'){
         serviceOptions.style.display = 'none';
@@ -602,6 +595,11 @@ services.addEventListener( 'click',()=>{
         serviceOptions.style.display = 'block';
     }
 });
+if(window.innerWidth>920){
+services.addEventListener( 'mouseover',()=>{
+        serviceOptions.style.display = 'block';
+});
+}
 const IstSearch = document.getElementById('IstSearch');
 const IIndSearch = document.getElementById('IIndSearch');
 const IIndSearchOptions = document.getElementById('IIndSearchOptions');
@@ -622,14 +620,14 @@ IIndSearch.addEventListener('click',()=>{
 const option1 = document.querySelectorAll('#IstSearchOptions p');
 for(let i=0;i<option1.length;i++){
              option1[i].addEventListener('click',()=>{
-                IstSearch.setAttribute('value',option1[i].innerHTML);
+                IstSearch.value=option1[i].textContent;
                 IstSearchOptions.style.display = 'none';
              })
 }
 const option2 = document.querySelectorAll('#IIndSearchOptions p');
 for(let i=0;i<option2.length;i++){
              option2[i].addEventListener('click',()=>{
-                IIndSearch.setAttribute('value',option2[i].innerHTML);
+                IIndSearch.value = option2[i].innerHTML;
                 IIndSearchOptions.style.display = 'none';
              })
 }
