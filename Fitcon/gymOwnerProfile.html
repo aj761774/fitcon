@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   
+    <header>
+
+        <a id="leftPart" href="dashboard.html">Fit💪🏽con</a>
+        <span id="rightPart">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="profile.html">Profile</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            <a href="#">Fitcon Tv</a>
+            <a href="#">Chats</a>
+            <a href="#">Notification</a>
+            <a href="#">Logout</a>
+        </span>
+       <span id="Mobilemenu"><hr/><hr/><hr/></span>
+      
+    </header>
+    
+    <div id="rightPartMobile">
+        <p id="close">+</p> <br/><br/><br/><br/>
+        <a href="dashboard.html"><p>Dashboard</p></a>
+        <a href="profile.html"><p>Profile</p></a>
+        <a href="leaderboard.html"><p>Leaderboard</p></a>
+        <a href="#"><p>Fitcon Tv</p></a>
+    
+        <a href="#"><p>Chats</p></a>
+        <a href="#"><p>Notification</p></a>
+        <a href="#"><p>Logout</p></a>
+    </div>
+  <main>
+   <div id="gym-profile-section">
+       <div>
+       <img src="img/gym2.jpg" id="profile" alt=""> 
+       <button id="changeGymIcon" >change gym Photo📷</button> 
+      <input type="file" id="editGymPhoto" style="display: none;" />
+    </div>
+       
+       <div >
+        
+        <h1>Gym Details</h1> 
+        <hr>
+        
+        
+        <div id="gym-details">
+               <div>
+                   <h4>Gym Name</h4>
+                   <input type="text" placeholder="Impact">
+                </div>
+               <div>
+                <h4>Silver plan price</h4>
+                <input type="text" placeholder="Rs 900">
+                </div>
+               <div>
+                <h4>Gold plan price</h4>
+                <input type="text" placeholder="Rs 1200">
+               </div>
+               <div>
+                   <h4>Platinum plan price</h4>
+                   <input type="text" placeholder="Rs 2000">
+                </div>
+               <div>
+                   <h4>Gallery Image 1</h4>
+                   <input type="file">
+                </div>
+               <div>
+                <h4>Gallery Image 2</h4>
+                <input type="file">
+                </div>
+               <div>
+                <h4>Gallery Image 3</h4>
+                <input type="file">
+                </div>
+               <div>
+                <h4>Gallery Image 4</h4>
+                <input type="file">
+                </div> 
+
+                <div>
+                    <h4>Gallery Image 5</h4>
+                    <input type="file">
+                </div> 
+                <div>
+                    <h4>Gallery Image 6</h4>
+                    <input type="file">
+                </div> 
+               <div>
+                   <h4>Address</h4>
+                   <textarea  cols="30" rows="10"></textarea>
+               </div>
+              <div>
+                  <h4>Services</h4>
+                  <input type="text" placeholder="Zym"> <br>
+                  <input type="text" placeholder="Zumba"> <br>
+                  <input type="text" placeholder="Yoga">
+              </div>
+            </div>
+       </div>
+        <button>Update</button>
+   </div>
+</main>
+   <script src="js/jquery-3.3.1.min.js"></script>
+   <script src="js/index.js"></script>
+   <script src="js/gymProfile.js"></script>
+</body>
+</html>

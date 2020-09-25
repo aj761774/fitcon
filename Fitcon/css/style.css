@@ -1,0 +1,939 @@
+body{
+margin:0;
+scroll-behavior: smooth;
+background-color: white;
+overflow-x: hidden;
+}
+#leftPart img{
+    width:25px;
+    height: 25px;
+  
+}
+
+input:focus,button:focus,textarea:focus,select:focus{
+    outline: none;
+}
+header{
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+    padding:1.1rem 1.2rem;
+    position: fixed;
+    top: 0;
+    width: 98%;
+    z-index: 800;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+header a:hover{
+    opacity: 0.7;
+}
+
+a {
+    text-decoration:none;
+    font-size:1.1rem;
+    color:black;
+    margin:0 0.8rem;
+}
+a#leftPart{
+  font-weight: bolder;
+ 
+}
+#Mobilemenu{
+    cursor: pointer;
+    display: none;
+    margin-right: 1rem;
+    border: 3px solid black;
+    border-radius: 100%;
+    padding-top: 0.26rem;
+    padding-bottom: 0.26rem;
+
+}
+
+#Mobilemenu hr{
+   width:25px;
+   height:1px;
+   background-color: black;
+   margin: 0.3rem;
+}
+#close{
+    float: right;
+    margin-right: 1rem;
+    border: 2px solid black;
+    cursor: pointer;
+    padding:0.1rem 0.5rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    border-radius: 100%;
+    transform: rotate(45deg);
+
+}
+
+#rightPart{
+    float: right;
+}
+#rightPartMobile{
+  
+    width: 19rem;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    left:-20rem;
+    /* display: none; */
+    z-index: 1000;
+    text-align: center;
+    background-color: white;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+
+#rightPartMobile a p{
+   margin:0;
+   border-bottom:1px solid rgba(0,0,0,0.2);
+}
+#search-section {
+    padding: 1.2rem;
+    padding-top:6rem;
+}
+#search-section span{
+    padding: 1rem;
+}
+#search-section span:nth-child(1){
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: brown;
+    text-shadow: 1px 1px 1px grey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#search-section div{
+    float: right;
+}
+#search-section div input{
+    height:2.5rem;
+    width:30rem;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: none;
+}
+#search-section div input::placeholder{
+  position: relative;
+  left: 1rem;
+  font-size: 1.1rem;
+}
+#search-section div button{
+    border: none;
+    height:2.5rem;
+    background-color: #036;
+    color: white;
+    padding:0.5rem;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+    /* border:1px solid rgba(0,0,0,0.2); */
+  
+}
+
+
+#branche-section{
+    margin: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+ 
+    /* background-image: linear-gradient(to bottom,white 50%,lightskyblue 50%) ; */
+}
+#branche-section h1{
+    background-color: rgba(0,0,0,0.5);
+    margin:0;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 1rem;
+}
+Address{
+    /* margin-bottom:0.5rem; */
+    font-weight: bolder;
+    font-size: 1.1rem;
+    padding-bottom: 2rem;
+    margin: 0.5rem 1rem;
+}
+Address .status{
+    color: green;
+    float: right;
+  
+}
+Address .city{
+    float: left;
+   
+}
+#branch-carousel{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.branchCard{
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin:0.2rem;
+    width:17rem;
+    background-color: white;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+.branchCard img{
+   
+  border-top-right-radius: 15px;
+}
+.branchCardBody h2{
+    margin: 0;
+    padding-top: 3rem;
+    color: crimson;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.branchCardBody h6{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: rgba(0,0,0,0.7);
+}
+.branchCardBody .owner{
+    position: absolute;
+    border-radius: 100%;
+    border: 5px solid white;
+    bottom:10rem;
+    left:6rem;
+}
+.branchCardBody  .explore{
+    cursor: pointer;
+    color: white;
+    padding:0.6rem 1.3rem;
+    border-radius: 7px;
+    background-color: blue;
+    margin-bottom: 1rem;
+    border: none;
+}
+.branchCardBody  .explore:hover{
+    background-color: navy;
+   
+}
+.branchCard .rating{
+    position:absolute;
+    left: 0.2rem;
+    width: 50px;
+    padding: 0.2rem;
+    color: white;
+    background-color:black;
+}
+/*Activity section */
+#activity{
+    margin: 1rem;
+    margin-top: 3rem;
+    border-top: 1px solid black;
+    border-top-style: dotted;
+    text-align: center;
+}
+#activity h1{
+    margin-top: 0.3rem;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 1rem;
+}
+#activity .row{
+    margin: 1.3rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+#activity .row .col1,#activity .row .col2,#activity .row .col3{
+    text-align: center;
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+#activity .row .col1,#activity .row .col3{
+  width: 16rem;
+  
+}
+#activity .row .col1 img{
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    border: 5px solid white;
+}
+#activity .row .col1 h4{
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#activity .row .col1 h3{
+    margin-top:0.5rem;
+    font-style: italic;
+}
+#activity .row .col1 p span:nth-child(2){
+    float: right;
+    margin-right: 1.2rem;
+}
+#activity .row .col1 p span:nth-child(1){
+    float: left;
+    margin-left: 1.2rem;
+}
+
+
+#activity .row .col1 h4 span:nth-child(2){
+    float: right;
+    margin-right:1.2rem;
+    padding: 0.3rem 1.6rem;
+    color: black;
+    background-color: greenyellow;
+    border-radius: 15px;
+}
+#activity .row .col1 h4 span:nth-child(1){
+    float: left;
+    margin-left: 1.2rem;
+    padding: 0.3rem 1.6rem;
+    color: black;
+    background-color: lightskyblue;
+    border-radius: 15px;
+}
+#activity .row .col2{
+    flex-grow: 2;
+    background-color: rgba(0,0,0,0.05);
+}
+
+#activity .row .col2 h2{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid black;
+}
+
+#activity .row .col2 table{
+    margin: auto;
+  
+    
+}
+#activity .row .col2 table tr{
+    font-size: 1.2rem;
+    
+    color: rgba(0,0,0,0.8);
+}
+#activity .row .col2 table th,#activity .row .col2 table td{
+    padding-bottom: 1rem;
+}
+
+
+#activity .row .col3 h1{
+    background-color: #036;
+    font-size: 8rem;
+    margin: 0;
+    color: goldenrod;
+   text-shadow: 4px 4px 1px lightblue;
+    background-image: url(../img/trophy.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#activity .row .col1 div{
+    background-color:crimson;
+    margin: 0.5rem;
+    padding:0.7rem 1rem;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 4px 2px 3px -1px lightblue;
+}
+
+#activity .row .col2 div{
+    margin: 3%;
+    display: inline-block;
+    background-color: crimson;
+    width: 9%;
+    writing-mode: vertical-lr;
+    padding-bottom: 2rem;
+    padding-top: 0.5rem;
+    color: transparent;
+   animation: showHide 0.5s infinite;
+    font-weight: bolder;
+}
+
+@keyframes showHide{
+    100%{
+        color:white;
+    }
+    
+ } 
+#activity .subCard{
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);   
+}
+#price{
+  font-size: 2.5rem;
+  margin: 0;
+  color: green;
+  
+  
+}
+#activity .subCard h4{
+    color: red;
+    margin: 0;
+    margin-top :0.5rem;
+}
+#Yourtime{
+    font-size: 3rem;
+    margin: 0.5rem;
+    color: brown;
+}
+#Yourtime sub,#price sub{
+    font-size: 1rem;
+    font-weight: bolder;
+}
+#activity #scoreBoard{
+    background-image: linear-gradient(to bottom,white 20%,lightblue 80%) ;
+}
+
+/* profule section */
+#profile-section,#gym-profile-section{
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+    padding:1.3rem 1rem;
+    margin:1rem;
+    margin-top: 5.5rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+#profile-section h1,#gym-profile-section h1{
+    margin: 0.5rem;
+    font-size: 1.5rem;
+}
+#gym-profile-section img{
+    width: 16rem;
+    height:13rem;
+    display: block;
+    margin: auto;
+    margin-bottom: 0.53rem;
+}
+#gym-profile-section textarea{
+    resize: none;
+    width: 98%;
+}
+#profile-section img{
+    width: 9rem;
+    height: 9rem;
+    border:5px solid white;
+    border-radius: 100%;
+    display: block;
+    margin: auto;
+    margin-bottom: 0.53rem;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+#personal-details,#gym-details {
+    margin-top: 1rem;
+    width: 90%;
+    display:inline-flex;
+    flex-wrap: wrap;
+    text-align: left;
+    justify-content: center;
+}
+
+#personal-details div h4,#gym-details div h4{
+    margin: 0;
+    margin-bottom:0.5rem ;
+}
+#personal-details div,#gym-details div{
+    background-color: white;
+    margin:1% 1%;
+    width: 18em;
+    padding-left: 0.5rem;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+    padding: 0.5rem;
+    border-radius:12px ;
+    color:rgba(0,0,0,0.7)
+}
+#gym-details div input{
+    background-color: white;
+    margin:1% 1%;
+    width: 18em;
+    padding-left: 0.5rem;
+    padding: 0.5rem;
+    border-radius:12px ;
+    color:rgba(0,0,0,0.7);
+    border:1px solid rgba(0,0,0,0.5);
+}
+#profile-section #changeIcon,#gym-profile-section #changeGymIcon{
+    color: white;
+    margin-top: 0.5rem;
+    background-color: black;
+    border: none;
+    border-radius: 13px;
+     padding:0.3rem 0.5rem;
+     cursor: pointer;
+     box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+#profile-section #edit,#gym-profile-section button{
+    border: none;
+    border-radius:15px;
+    background-color: blue;
+    color: white;
+    padding:0.5rem 1.5rem;
+    cursor: pointer;
+    float: right;
+}
+#gym-profile-section button{
+    float: none;
+}
+#profile-section #edit:hover,#editModal #editForm button:hover{
+    background-color: #036;
+    cursor: pointer;
+}
+
+#editModal{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display:none;
+    justify-content: center;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+#editModal #editTopContainer{
+    background-color: white;
+    color: black;
+    margin-top:3rem;
+    border-radius: 13px;
+    height: 30rem;
+}
+#editClose{
+    transform: rotate(45deg);
+    font-size: 1.5rem;
+    color: red;
+    cursor: pointer;
+}
+
+
+#editModal #editTopContainer h4{
+    margin: 0;
+    padding: 0.5rem;
+}
+#editModal #editTopContainer h4 span{
+    float: right;
+}
+#editModal #editForm{
+    display: flex;
+    justify-content: center;
+    border-radius: 13px;
+    padding-top: 1rem;
+    width: 20rem;
+    background-color: white;
+    height:29rem;
+    overflow-y: scroll;
+}
+#editModal #editForm input{
+    background-color: white;
+    margin:1rem 1%;
+    width: 18em;
+    padding-left: 0.5rem;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+    padding: 0.5rem;
+    border-radius:12px ;
+    color:rgba(0,0,0,0.7);
+    border: none;
+ 
+}
+#editModal #editForm label{
+    font-size: 1rem;
+    margin: 1rem 0.5rem;
+}
+#editModal #editForm button{
+    display: block;
+    margin:1rem auto;
+    width: 100%;
+    padding:0.5rem 1rem;
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 13px;
+}
+#editModal #editForm select{
+    background-color: white;
+    margin:1rem 1%;
+    width: 19em;
+    padding-left: 0.5rem;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+    padding: 0.5rem;
+    border-radius:12px ;
+    color:rgba(0,0,0,0.7);
+    border: none;
+  
+}
+#editModal #editForm textarea{
+    background-color: white;
+    margin:1rem 1%;
+    width: 19em;
+    padding-left: 0.5rem;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+    padding: 0.5rem;
+    border-radius:12px ;
+    color:rgba(0,0,0,0.7);
+    border: none;
+    resize: none;
+}
+/* gym detail begins */
+#gymDetail{
+    margin-top:3.8rem;
+    height:27rem;
+    position: relative;
+}
+#gymDetail #gymRating{
+    color: red;
+}
+
+
+#gymDetail h1{
+    position: relative;
+    top:80%;
+    padding:1rem;
+    font-size: 1.7rem;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 0;
+    background-color:rgba(255,255,255,0.5);
+    text-align: center;
+    color: brown;
+}
+#gymAddress{
+    margin: 1rem;
+    margin-top: 0;
+    padding: 2rem;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+#gymAddress h3{
+    margin: 0.5rem;
+}
+#gymStatus{
+    font-size: 1.7rem;
+    text-align: center;
+    font-weight: bolder;
+    text-align: center;
+    color: green;
+}
+
+/* services section */
+#services{
+ 
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    background-color: rgba(0,0,0,0.8);
+}
+#services .serviceCard{
+    margin: 0.5rem;
+    width: 5rem;
+    display: inline-block;
+    padding: 2rem 1rem;
+    font-weight: bolder;
+    color:black
+}
+
+#membershipPlan{
+    text-align: center;
+}
+#membershipPlan div{
+    display: inline-block;
+    width: 15rem;
+    margin: 1rem;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+#membershipPlan div:hover{
+   transform: scale(1.1);
+   opacity: 0.7;
+}
+#membershipPlan div h1{
+    margin-bottom: 0;
+    color:white;
+    text-shadow: 3px 3px 1px rgba(0,0,0,0.2);
+}
+#membershipPlan div p{
+    color: rgba(0,0,0,0.7);
+}
+#membershipPlan div button{
+    background-color:transparent;
+    color: rgba(0,0,0,0.8);
+    font-weight: bold;
+    margin: 2rem auto;
+    padding: 0.4rem 1rem;
+    border: 2px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+#membershipPlan div button:hover{
+    background-color: blue;
+    color:white;
+}
+#gallery{
+    
+    text-align: center;
+}
+
+#gallery  img{
+    width: 17rem;
+    height: 17rem;
+    margin: 2rem;
+    border: 2px solid white;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+
+#location{
+    text-align: center;
+    margin: 1rem;
+}
+#location img{
+    width: 80%;
+}
+
+/* leader board */
+#LeaderBoard{
+    height: 100vh;
+    margin: 0.5rem;
+    overflow-x: hidden;
+    margin-top: 3.9rem;
+    padding-top: 2rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right,#808080,#203040);
+}
+
+
+#LeaderBoard table{
+   
+    border: 0.1rem solid white;
+    box-shadow: 4px 4px 6px rgba(0,0,0,0.12);
+    background-color: white;
+    text-align: center;
+    margin: auto;
+    border-spacing: 0;
+    color: black;
+}
+#table{
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+#table::-webkit-scrollbar{
+    display: none;
+}
+#trainerLeaderboard{
+    display: none;
+}
+#LeaderBoard table thead{
+    background-color:#203040;
+    color: white;
+    font-size: 1.1rem;
+}
+
+#LeaderBoard tr:nth-child(even){
+    background-color: rgba(0,0,0,0.2);
+}
+
+#LeaderBoard th,td{
+  padding:0.5rem 0.5rem;
+  width: 200px;
+}
+#LeaderBoard td:nth-child(1){
+    width: 5rem;
+}
+
+#user-trainer{
+   /* background-color: white; */
+
+   margin: auto;
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content:center;
+}
+#user-trainer button{
+    margin: 1rem;
+    width: 10rem;
+    padding:0.5rem 0;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    background: transparent;
+    border: none;
+    box-shadow: 4px 4px 6px rgba(0,0,0,0.14),-2px -2px 6px rgba(0,0,0,0.14);
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+}
+#user-trainer button.active{
+    background-color: white;
+    color: black;
+}
+#searchUserTrainer{
+    margin-bottom: 1rem;
+    width:17rem;
+    height: 2rem;
+    border-radius: 12px;
+    border: none;
+}
+#searchUserTrainer::placeholder{
+    padding-left: 1rem;
+}
+/* user control */
+#userControl{
+    margin-top: 3.9rem;
+    margin:2rem;
+    overflow-x: hidden;
+}
+#userControl div{
+    position: relative;
+}
+#userControl div h2{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1.5rem;
+    margin: 0;
+    font-size: 1.7rem;
+    color: brown;
+    text-align: center;
+    background-color: rgba(255,255,255,0.5);
+}
+#userControl div img{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15rem;
+}
+#customerInfoSearch{
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content:space-between;
+}
+#customerInfoSearch span:nth-child(1){
+    margin: 0.5rem;
+    font-size: 2rem;
+}
+#customerInfoSearch span:nth-child(2) input{
+    margin: 0.5rem;
+    height:2rem;
+    border: none;
+    width:15rem;
+    border-radius: 13px;
+    border: 1px solid rgba(0,0,0,0.12);
+    box-shadow: 4px 4px 6px rgba(0,0,0,0.14),-2px -2px 6px rgba(0,0,0,0.14);
+}
+#customerInfoSearch span:nth-child(2) input::placeholder{
+    padding-left: 1rem;
+}
+#customers{
+    overflow-x: scroll;
+}
+#customers::-webkit-scrollbar{
+    display: none;
+}
+#customers table{
+    border: 0.1rem solid black;
+    box-shadow: 4px 4px 6px rgba(0,0,0,0.12);
+    background-color: white;
+    text-align: center;
+    margin: auto;
+    border-spacing: 0;
+    color: black;
+    margin-top: 1rem;
+}
+#customers table th,td{
+    width: 12.5rem;
+}
+#customers table thead th{
+    background-color: #036;
+    color: white;
+    padding: 0.5rem;
+}
+#customers tr:nth-child(even){
+    background-color: rgba(0,0,0,0.2);
+}
+#customers table tbody td button{
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 0.5rem 0.8rem;
+    background-color: orange;
+    box-shadow: 4px 4px 6px rgba(0,0,0,0.12);
+    cursor: pointer;
+}
+#customers table tbody td button:hover{
+    opacity: 0.8;
+}
+#addCustomer button{
+    margin:0.5rem;
+    margin-bottom: 0;
+    padding: 0.8rem 1rem;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+#addCustomer button:hover{
+   opacity: 0.7; 
+}
+@media screen and (max-width:535px){
+    #search-section span{
+        display: none;
+    }
+    #search-section div{
+       text-align: center;
+    }
+    #activity .row .col2 table tr{
+        font-size: 0.8rem;
+    }
+    #activity .row .col2 div{
+        margin: 2%;
+        width: 12%;
+    }
+
+}
+@media screen and (max-width:900px){
+    #rightPart{
+        display: none;
+    }
+    #Mobilemenu{
+      display: block;  
+    }
+    #search-section div input{
+        width:20rem;
+    }
+}
+@media screen and (max-width:1100px){
+    #activity .row .col3{
+        width: 100%;
+        
+    }
+}
+@media screen and (max-width:800px){
+    #activity .row .col1{
+        width: 100%;
+        
+    }
+}
+@media screen and (min-width:330px) and (max-width:417px){
+    #search-section div input{
+        width:15rem;
+    }
+ 
+}
+@media screen and (min-width:319px) and (max-width:330px){
+    #search-section div input{
+        width:13.5rem;
+    }
+ 
+}
+

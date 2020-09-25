@@ -1,0 +1,3 @@
+$('#changeGymIcon').click(()=>{
+    $('#editGymPhoto').click();
+ });

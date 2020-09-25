@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="editModal">
+        <div id="editTopContainer">
+            <h4>Edit details <span id="editClose">+</span></h4>
+            <hr>
+        <div id="editForm">
+         <form action="">
+            <label for="gender">Gender</label> <br>
+             <select name="" id="">
+                 <option value="">Male</option>
+                 <option value="">Female</option>
+             </select> <br>
+             <label for="First Name">First Name</label><br>
+             <input type="text" name="fname" value="Pushker"><br>
+             <label for="Last Name" >Last Name</label><br>
+             <input type="text" name="Lname" value="Gautam"><br>
+             <label for="Email">Email</label><br>
+             <input type="text" name="email" value="abc@gmail.com"><br>
+             <label for="Mobile no">Mobile no</label><br>
+             <input type="text" name="MobileNo" value="9936890012"> <br>
+             <label for="DOB">DOB</label><br>
+             <input type="date" name="dob" ><br>
+             <label for="zip code">Zip code</label><br>
+             <input type="text" name="zipCode" value="231219"><br>
+             <label for="City">City</label><br>
+             <input type="text" name="city" value="Kanpur"><br>
+             <label for="state">State</label><br>
+             <input type="text" name="state" value="Uttar Pradesh"> <br>
+             <label for="Address">Address</label> <br>
+             <textarea name="address" id="" cols="30" rows="3">plot no- 312 ,udya socity</textarea> <br>
+             <label for="About">About</label> <br>
+             <textarea name="address" id="" cols="30" rows="3">this is kunwar pushker Gautam</textarea> <br>
+             <button type="submit" id="update">Update</button>
+         </form>
+        </div>
+    </div>
+    </div>
+    <header>
+
+        <a id="leftPart" href="dashboard.html">Fit💪🏽con</a>
+        <span id="rightPart">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="profile.html">Profile</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            <a href="#">Fitcon Tv</a>
+            <a href="#">Chats</a>
+            <a href="#">Notification</a>
+            <a href="#">Logout</a>
+        </span>
+       <span id="Mobilemenu"><hr/><hr/><hr/></span>
+      
+    </header>
+    
+    <div id="rightPartMobile">
+        <p id="close">+</p> <br/><br/><br/><br/>
+        <a href="dashboard.html"><p>Dashboard</p></a>
+        <a href="profile.html"><p>Profile</p></a>
+        <a href="leaderboard.html"><p>Leaderboard</p></a>
+        <a href="#"><p>Fitcon Tv</p></a>
+    
+        <a href="#"><p>Chats</p></a>
+        <a href="#"><p>Notification</p></a>
+        <a href="#"><p>Logout</p></a>
+    </div>
+  
+   <div id="profile-section">
+    <button id="edit">Edit Details</button>
+    <br> <br>
+       <div>
+       <img src="img/gymOwner.jpg" id="profile" alt="">
+       @pushker <br>
+       <button id="changeIcon" >change Photo📷</button> 
+      <input type="file" id="editPhoto" style="display: none;" />
+    </div>
+       
+       <div >
+        
+        <h1>Personal Details</h1> 
+        <hr>
+        
+        
+        <div id="personal-details">
+               <div>
+                   <h4>First Name</h4>
+                   Mr. kunwar pushker
+                </div>
+               <div>
+                <h4>Last Name</h4>
+                   Gautam
+                </div>
+               <div>
+                <h4>Mobile No</h4>
+                9876894512
+               </div>
+               <div>
+                   <h4>Email</h4>
+                   abc@gmail.com
+                </div>
+               <div>
+                   <h4>DOB</h4>
+                   18-Feb-1990
+                </div>
+               <div>
+                   <h4>Zip code</h4>
+                   231219
+                </div>
+               <div>
+                <h4>City</h4>
+                   Kanpur
+                </div>
+               <div>
+                <h4>State</h4>
+                   Uttar Pradesh
+                </div> 
+
+               <div>
+                   <h4>Address</h4>
+                   <Address>
+                       plot no:321,udya socity
+                   </Address>
+               </div>
+              <div>
+                  <h4>About</h4>
+                  This is kunwar pushker Gautam
+                  This is kunwar pushker Gautam
+              </div>
+            </div>
+       </div>
+    
+   </div>
+   <script src="js/jquery-3.3.1.min.js"></script>
+   <script src="js/index.js"></script>
+ <script src="js/profile.js"></script> 
+</body>
+</html>
