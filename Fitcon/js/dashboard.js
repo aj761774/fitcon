@@ -46,11 +46,13 @@ $('#branch-carousel').owlCarousel({
   })
 
   $('#changePasswordButton').on('click',()=>{
-    $('#changePasswordForm').slideToggle();
+    $('#changePasswordModal').fadeIn();
+    $('#changePasswordModalTopContainer').fadeIn();
+    $('body').css('overflowY','hidden');
+  })
+  $('#changePasswordModal .close').on('click',()=>{
+    $('#changePasswordModal').fadeOut();
+    $('#changePasswordModalTopContainer').fadeOut();
+    $('body').css('overflowY','visible');
   })
 
-  $('#closeChangePassword').on('click',()=>{
-    $('#changePasswordForm').slideUp();
-  })
-
- 

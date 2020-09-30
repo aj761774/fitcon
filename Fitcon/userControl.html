@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>user control</title>
+    
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -35,27 +36,48 @@
         <a href="#"><p>Notification</p></a>
         <a href="#"><p>Logout</p></a>
     </div>
-    <div id="userControl">
 
-        <div><img src="img/gym4.jpg" alt="">
-            <h2>Impact Gym</h2>
-        </div>
-        <div id="addCustomer"><button>Add new customer</button></div>
-        <h1 style="padding: 1rem;background-color: black;color: white;text-align: center;">
+    <div id="customerReviwTopContainer">
+      <div id="customerReviwModal">
+          <p class="close">+</p>
+          <div>
+              <form action=""> 
+                  <textarea name="" id="" cols="25" rows="10" placeholder="write your review"></textarea>
+                  <div id="userReviewRating">
+                    <span>☆</span>
+                    <span>☆</span>
+                    <span>☆</span>
+                    <span>☆</span>
+                    <span>☆</span>
+                  </div>
+                  <button>Submit</button>
+              </form>
+          </div>
+      </div>
+      </div>
+    <div id="userControl">
+ 
+        <h1 style="padding: 1rem 0;background-color: black;color: white;text-align: center;">
           Customer info
           <div id="memberSearchContainer">
-            <input type="search" id="searchMemberById" placeholder="search by member id">
-            <input type="search" id="searchMemberName" placeholder="search by member name">
+            <select name="" id="searchByNameOrId">
+              <option value="memberid">member id</option>
+              <option value="membername">Member name</option>
+              
+            </select>
+            <input type="search" id="searchMemberName" placeholder="search by member name or id">
           </div>
         </h1>
         <div id="customers">
               <div class="member">
                 <img src="img/gymOwner.jpg" alt="">
-                <p class="MemberName">Arman Malik</p>
+                <p class="MemberName moreButton">Arman Malik</p>
                 <hr> 
                 <p><span>Member Id</span> <span class="MemberId">@Arman</span></p> <br>
-                  <p><span>plan Type</span> <span>Gold</span></p> <br>
+               
                   <div class="moreInfo">
+                   
+                    <p><span>plan Type</span> <span>Gold</span></p> <br>
                     <p><span>Mobile number</span> <span>8679002341</span></p> <br>
                     <p><span>Email</span> <span>pushker@123gmail.com</span></p> <br>
                   <p><span>Address</span> <span>Avanti vihar,Raipur</span></p> <br>
@@ -67,22 +89,24 @@
                     <p><span>Days Remaining</span> <span>20</span></p> <br>
                   </div>
                   <div>
-                    <button class="moreButton">More</button>
-                    <button>Review</button>
-                      <button>Paid</button>
-                      <button>Unpaid</button>
+                    <button class="customerReviwButton">Review</button>
+                    <button>Paid</button>
+                      <select name="" id="">
+                        <option value="">Offline</option>
+                        <option value="">Online</option>
+                      </select>
                   </div>
               </div>
 
 
               <div class="member">
                 <img src="img/gymOwner.jpg" alt="">
-                    <p class="MemberName">Pushker Gautam</p>
+                    <p class="MemberName moreButton">Pushker Gautam</p>
                     <hr> 
-                <p><span>Member Id</span> <span class="MemberId">@Pushakr321</span></p> <br>
-                <p><span>plan Type</span> <span>Gold</span></p> <br>
+                    <p><span>Member Id</span> <span class="MemberId">@Pushakr321</span></p> <br>
                 <div class="moreInfo">
                   
+                  <p><span>plan Type</span> <span>Gold</span></p> <br>
                     <p><span>Mobile number</span> <span>8679002341</span></p> <br>
                     <p><span>Email</span> <span>pushker@123gmail.com</span></p> <br>
                   <p><span>Address</span> <span>Avanti vihar,Raipur</span></p> <br>
@@ -94,19 +118,20 @@
                   <p><span>Days Remaining</span> <span>20</span></p> <br>
                 </div>
                 <div>
-                  <button class="moreButton">More</button>
-                  <button>Review</button>
-                    <button>Paid</button>
-                    <button>Unpaid</button>
+                  <button class="customerReviwButton">Review</button>
+                  <button>Paid</button>
+                    <select name="" id="">
+                      <option value="">Offline</option>
+                      <option value="">Online</option>
+                    </select>
                 </div>
             </div>
 
             <div class="member">
                 <img src="img/gymOwner.jpg" alt="">
-                    <p class="MemberName">Abhinav jaiswal</p>
+                    <p class="MemberName moreButton">Abhinav jaiswal</p>
                     <hr> 
-              <p><span>Member Id</span> <span class="MemberId">@Abhinav123</span></p> <br>
-                <p><span>plan Type</span> <span>Gold</span></p> <br>
+                    <p><span>Member Id</span> <span class="MemberId">@Abhinav123</span></p> <br>
                 <div class="moreInfo">
                   <p><span>Mobile number</span> <span>8679002341</span></p> <br>
                   <p><span>Email</span> <span>pushker@123gmail.com</span></p> <br>
@@ -117,12 +142,15 @@
                   <p><span>Join date</span> <span>11/09/2020</span></p> <br>
                   <p><span>Expiry date</span> <span>11/12/2020</span></p> <br>
                   <p><span>Days Remaining</span> <span>20</span></p> <br>
+                <p><span>plan Type</span> <span>Gold</span></p> <br>
                 </div>
                 <div>
-                  <button class="moreButton">More</button>
-                  <button>Review</button>
-                    <button>Paid</button>
-                    <button>Unpaid</button>
+                  <button class="customerReviwButton">Review</button>
+                  <button>Paid</button>
+                    <select name="" id="">
+                      <option value="">Offline</option>
+                      <option value="">Online</option>
+                    </select>
                 </div>
             </div>
 
@@ -131,13 +159,11 @@
             
             <div class="member">
                 <img src="img/gymOwner.jpg" alt="">
-                    <p class="MemberName">Rahul</p>
+                    <p class="MemberName moreButton">Rahul</p>
                     <hr> 
-              <p><span>Member Id</span> <span class="MemberId">@Rahul456</span></p> <br>
-                 
-                
-                <p><span>plan Type</span> <span>Gold</span></p> <br>
+                    <p><span>Member Id</span> <span class="MemberId">@Rahul456</span></p> <br>
                 <div class="moreInfo">
+                   <p><span>plan Type</span> <span>Gold</span></p> <br>
                     <p><span>Mobile number</span> <span>8679002341</span></p> <br>
                     <p><span>Email</span> <span>pushker@123gmail.com</span></p> <br>
                   <p><span>Address</span> <span>Avanti vihar,Raipur</span></p> <br>
@@ -149,17 +175,19 @@
                   <p><span>Days Remaining</span> <span>20</span></p> <br>
                 </div>
                 <div>
-                  <button class="moreButton">More</button>
-                  <button>Review</button>
-                    <button>Paid</button>
-                    <button>Unpaid</button>
+                  <button class="customerReviwButton">Review</button>
+                  <button>Paid</button>
+                    <select name="" id="">
+                      <option value="">Offline</option>
+                      <option value="">Online</option>
+                    </select>
                 </div>
             </div>
         </div>
 
         
     </div>
-
+    <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/customerControl.js"></script>
 <script src="js/index.js"></script>
 </body>
