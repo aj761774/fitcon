@@ -105,7 +105,28 @@
         
             </div>
     </div>
-
+<div id="fitnessModalTopContainer">
+<div id="fitnessModal">
+    <p class="close">+</p>
+    <div>
+        <form action="">
+            <input type="checkbox">
+            <label for="weight">Loss fat</label> <br>
+            
+            <input type="checkbox"> 
+            <label for="fitness">General fitness</label><br>
+            
+            <input type="checkbox"> 
+            <label for="muscel">Gain Muscle</label><br>
+            <input type="checkbox"> 
+            <label for="endurance">Improve endurance</label><br>
+            <input type="checkbox"> 
+            <label for="flexibility">Improve flexibility</label><br>
+            <button>Submit</button>
+        </form>
+    </div>
+</div>
+</div>
     <div id="activity">
          <h1>Activity</h1>
          <div class="row">
@@ -140,19 +161,39 @@
          <div class="row">
             <div class="col1">
                 <h2>Options</h2>
-                <div>Payments</div>
-                <div>Help</div>
-                <div>Payments</div>
-                <div>Payments</div>
+                <div><button>Payments</button></div>
+                <div><button>Help</button></div>
+                <div>
+                    <button id="changePasswordButton">change password</button>
+                    <div id="changePasswordForm">
+                        <p id="closeChangePassword">&#10005;</p>
+                        <form action="">
+                            <input type="password" placeholder="new password">
+                            <input type="password" placeholder="confirm password">
+                            <button>submit</button>
+                        </form>
+                       
+                    </div>
+                </div>
+                <div id="fitnessGoalButton"><button>Set fitness goals</button></div>
+                <div><h3>Your fitness goals:</h3>
+                    <p>lose fat</p>
+                    <p>gain muscel</p>
+                    <p>Improve flexibility</p>
+                </div>
             </div>
             <div class="col2" id="scoreBoard">
+                
                 <h2 style="border-bottom: none;">Score Board</h2>
-                <div style="height:200px ;">Regularity</div>
-                <div style="height:150px ;">Punctuality</div>
-                <div style="height:100px ;">Payments</div>
-                <div style="height:50px ;">Behaviour</div>
-                <div style="height:180px ;">Improvement</div>
-               
+                <div class="BarContainer" style="height: 80%;">
+                    <span class="progressBar">100%</span>
+                </div>
+                <div class="BarContainer" style="height: 70%;"> <span class="progressBar">90%</span></div>           
+                <div class="BarContainer" style="height: 75%;"> <span class="progressBar">95%</span></div>
+                <hr>
+                <div class="tag">Regularity</div>
+                <div class="tag">Performance</div>
+                <div class="tag">Behaviour</div>
             </div>
             <div class="col3">
                 <div class="subCard">
@@ -166,6 +207,38 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div id="fitMitr">
+        <h1>Your Fit-Mitr</h1>
+    <div id="fitMitrCardContainer">
+        <div>
+            <img src="img/gymOwner.jpg" alt="">
+            <h3> Pushker gautam</h3>
+        </div>
+        <div>
+            <img src="img/gymOwner.jpg" alt="">
+            <h3> Pushker gautam</h3>
+        </div>
+        <div>
+            <img src="img/gymOwner.jpg" alt="">
+            <h3> Pushker gautam</h3>
+        </div>
+    </div>
+</div>
+    <div id="reviewByGymOwner">
+        <h1>Reviews</h1>
+        <p>
+            this is me this is me  this is me  this is me this is me
+            this is me this is me  this is me  this is me this is me 
+            this is me this is me  this is me  this is me this is me 
+            this is me this is me  this is me  this is me this is me 
+            this is me this is me  this is me  this is me this is me
+            this is me this is me  this is me  this is me this is me 
+
+          </p>
+          <p>⭐⭐⭐⭐</p>
+          <p><b>By:</b> Abhinav Jaiswal</p>
+          <p><b>Review Date:</b> 12/07/2027</p>
     </div>
 </main>
     <script src="js/jquery-3.3.1.min.js"></script>

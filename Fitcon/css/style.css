@@ -61,7 +61,7 @@ a#leftPart{
     margin-right: 1rem;
     border: 2px solid black;
     cursor: pointer;
-    padding:0.1rem 0.5rem;
+    padding:0.1rem 0.55rem;
     margin-top: 1rem;
     font-size: 1.5rem;
     border-radius: 100%;
@@ -240,14 +240,14 @@ Address .city{
     display: flex;
     flex-wrap: wrap;
 }
-#activity .row .col1,#activity .row .col2,#activity .row .col3{
+#activity .row .col1,#fitMitrCardContainer div,#activity .row .col2,#activity .row .col3{
     text-align: center;
     margin: 0.5rem;
     padding: 1rem;
     border-radius: 15px;
     box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
 }
-#activity .row .col1,#activity .row .col3{
+#activity .row .col1,#activity .row .col3,#fitMitrCardContainer div{
   width: 16rem;
   
 }
@@ -331,31 +331,208 @@ Address .city{
 #activity .row .col1 div{
     background-color:crimson;
     margin: 0.5rem;
-    padding:0.7rem 1rem;
     border-radius: 15px;
     color: white;
     box-shadow: 4px 2px 3px -1px lightblue;
 }
+#activity .row .col1 div:last-child{
+    background-color: transparent;
+    box-shadow: none;
+    color: black;
+    margin: auto;
+}
+#activity .row .col1 div:last-child h3{
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid black;
+}
+#activity .row .col1 div:last-child p{
+    margin: 0.2rem;
+    font-size: 1.1rem;
+    color: #036;
+}
+#activity .row .col1 div button{
+    background-color:transparent;
+    width:100%;
+    padding:0.7rem 1rem;
+    border:none;
+    color: white;
+    cursor: pointer;
+}
+#activity .row .col1 div button:hover{
+    color: yellow;
+}
+#activity #changePasswordForm{
+    padding: 0.5rem;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+#activity #changePasswordForm input{
+    margin: 0.2rem;
 
-#activity .row .col2 div{
-    margin: 3%;
-    display: inline-block;
-    background-color: crimson;
-    width: 9%;
-    writing-mode: vertical-lr;
-    padding-bottom: 2rem;
-    padding-top: 0.5rem;
-    color: transparent;
-   animation: showHide 0.5s infinite;
-    font-weight: bolder;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 0.5rem;
+}
+#activity #changePasswordForm input::placeholder{
+    color: white;
+
+}
+#activity #changePasswordForm #closeChangePassword{
+    color: white;
+    text-align: right;
+    cursor: pointer;
+    font-size: 1rem;
+}
+#activity #changePasswordForm #closeChangePassword:hover{
+    color: red;
+}
+#activity #changePasswordForm button{
+    margin-top: 0.5rem;
+    background-color: orange;
+    border-radius: 15px;
+    width: 85%;
+    padding: 0.5rem ;
+    margin-bottom: 0.5rem;
 }
 
-@keyframes showHide{
-    100%{
-        color:white;
+#activity .row .col2 .BarContainer{
+    background-image: linear-gradient(to right,black,white);
+    overflow:hidden;
+    width:12%;
+    position: relative;
+    margin: 1rem;
+    margin-bottom: 0;
+    display: inline-block;
+}
+#activity .row .col2  .tag{
+    color: darkblue;
+    padding: 0.2rem 0.2rem;
+    width:12%;
+    font-size: 0.7rem;
+    display: inline-block;
+    font-weight: bolder;
+    margin: 1rem;
+    margin-top: 0;
     }
+#activity .row .col2 .BarContainer .progressBar{
+    display: block;
+    width:100%;
+    position: absolute;
+    bottom:0;
+    background-image: linear-gradient(to top,black,white);
+    color:white;
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
+#activity .row .col2 .BarContainer:hover .progressBar{
+    animation: progress 2s ease;
+    height: 100%;
+    color:orangered;
+}
+#activity .row .col2 .BarContainer:hover{
+   background-image: none;
+}
+#reviewByGymOwner{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#reviewByGymOwner p{
+    margin: auto;
+    width: 65%;
+}
+
+#fitMitr{
+    text-align: center;
+    margin: 1rem;
+}
+#fitMitr h1{
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 1rem;
+}
+#fitMitrCardContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#fitMitrCardContainer div img{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    float: left;
+}
+
+@keyframes progress{
+    0%{
+        height: 0;
+    }
+    100%{
+        height:100%;
+        color:orangered;
+    }
+}
+#fitnessModalTopContainer{
+ position:fixed;
+ width: 100%;
+ height:100%;
+ background-color: rgba(0,0,0,0.14);
+ top: 0;
+ z-index: 1200;
+ display: none;
+}
+#fitnessModal{
+    position: fixed;
+    z-index: 100000;
+    top:3rem;
+    width: 13rem;
+    margin: auto;
+    left:0;
+    right:0;
+    color: white;
+    background-color: rgba(0,0,0,0.8);
+    padding: 2rem;
+    display: none;
+}
+#fitnessModal label{
+    font-size: 1.3rem;
+    padding-left: 1rem;
+  
+}
+#fitnessModal button{
+    margin-top: 1rem;
+    padding: 0.4rem 2rem;
+    border: none;
+    color: white;
+    border: 2px solid red;
+    background-color: transparent;
+    border-radius: 15px;
+    width: 100%;
+    cursor: pointer;
+}
+#fitnessModal button:hover{
+    background-color: darkblue;
+}
+#fitnessModal .close{
+    position: absolute;
+    top: -1rem;
+    right: 0.5rem;
+    transform: rotate(45deg);
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+#activity .row .col2 hr{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    bottom: 0.3rem;
+    height: 1px;
+
     
- } 
+    background-color: black;
+}
+
+
 #activity .subCard{
     background-color: white;
     color: black;
@@ -387,12 +564,14 @@ Address .city{
     font-weight: bolder;
 }
 #activity #scoreBoard{
-    background-image: linear-gradient(to bottom,white 20%,lightblue 80%) ;
+    background-color: rgba(0,0,0,0.12) ;
+    height:21rem;
+    padding-bottom: 4rem;
+    color:red;
 }
 
 /* profule section */
 #profile-section,#gym-profile-section{
-    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
     padding:1.3rem 1rem;
     margin:1rem;
     margin-top: 5.5rem;
@@ -458,7 +637,7 @@ Address .city{
     color:rgba(0,0,0,0.7);
     border:1px solid rgba(0,0,0,0.5);
 }
-#profile-section #changeIcon,#gym-profile-section #changeGymIcon{
+#profile-section #changeIcon,#gym-profile-section #changeGymIcon,#gym-profile-section #changeGymLogo{
     color: white;
     margin-top: 0.5rem;
     background-color: black;
@@ -586,41 +765,161 @@ Address .city{
     position: relative;
 }
 #gymDetail #gymRating{
-    color: red;
+    color: orange;
+    font-size: 1rem;
+    text-align: right;
 }
-
 
 #gymDetail h1{
     position: relative;
-    top:80%;
-    padding:1rem;
-    font-size: 1.7rem;
+    top:77.8%;
+    padding:0.2rem 0.3rem 2rem 2rem;
+    font-size: 2.3rem;
     overflow: hidden;
     display: block;
     margin-bottom: 0;
-    background-color:rgba(255,255,255,0.5);
+    background-image: linear-gradient(to right,rgb(113, 113, 235),cyan);
     text-align: center;
-    color: brown;
+    color: white;
+}
+
+#gymDetail span img{
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    border: 4px solid white;
+    position: absolute;
+    left: 1rem;
+    bottom: -0.7rem;
+    z-index: 100;
+    animation: animateGymLogo 0.9s  infinite linear;
+}
+@keyframes animateGymLogo{
+    0%{
+        border-top-color: cyan;
+        border-left-color:cyan;
+    }
+    25%{
+        border-top-color: cyan;
+        border-left-color: white;
+        border-right-color: cyan;
+        border-bottom-color: white;
+        
+    }
+    50%{
+        border-top-color: white;
+        border-left-color:white;
+        border-right-color: cyan;
+        border-bottom-color: cyan; 
+    }
+    75%{
+        border-top-color: white;
+        border-left-color:cyan;
+        border-right-color: white;
+        border-bottom-color: cyan; 
+    }
+    100%{
+        border-top-color: cyan;
+        border-left-color:cyan;
+        border-right-color: white;
+        border-bottom-color: white; 
+    }
 }
 #gymAddress{
+    width: 40%;
     margin: 1rem;
-    margin-top: 0;
     padding: 2rem;
-    border-bottom-right-radius: 12px;
-    border-bottom-left-radius: 12px;
+    padding-top:1rem;
+    border-radius: 15px;
+    display: inline-block;
+ 
     box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
 }
 #gymAddress h3{
+    font-size: 2rem;
     margin: 0.5rem;
 }
-#gymStatus{
-    font-size: 1.7rem;
-    text-align: center;
+#gymAddress p{
+    font-size: 1.3rem;
+}
+#openDetail h1{
+    font-size: 2rem;
+    margin-top: 0;
     font-weight: bolder;
     text-align: center;
     color: green;
+    cursor: pointer;
 }
+#gymAddressandOpenContainer{
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:flex-start;
+}
+#openDetail{
+    padding:1rem 1rem;
+    width: 40%;
+   border-radius: 15px;
+   box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+#openDetail p span:first-child{
+  float: left;
+  margin-right:2rem ;
+  font-weight: bolder;
+}
+#openDetail p span:last-child{
+   float: right;
+   font-weight: bolder;
+  }
 
+#openCloseDayTime{
+    background-color: white;
+    margin:1rem auto;
+    width: 18rem;
+    display: inline-block;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+    padding: 0.5rem;
+    border-radius:12px ;
+    color:rgba(0,0,0,0.7)  
+}
+#openCloseDayTime h3{
+    color: black;
+}
+#openCloseDayTime label{
+    color: black;
+    font-weight: bolder;
+}
+#payPerWorkout{
+    margin:0;
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(0,0,0,0.6);
+
+    border-bottom: 2px solid white;
+}
+#payPerWorkout h1{
+    margin: 0.3rem;
+    color:yellow;
+}
+#payPerWorkout h2 span{
+
+    color:red;
+}
+#payPerWorkout button{
+    border: 2px solid blue;
+    border-radius: 15px;
+    color: black;
+    font-size: 1.8rem;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+#payPerWorkout button:hover{
+    background-color:blue;
+    color: white;
+}
 /* services section */
 #services{
  
@@ -697,6 +996,73 @@ Address .city{
     width: 80%;
 }
 
+#gymReview{
+
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.5);
+    width: 80%;
+    margin: auto;
+    border-radius: 12px;
+    border-top-left-radius: 0;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+#gymReview form{
+    display: none;
+}
+#gymReview textarea {
+    min-width: 80%;
+    max-width: 80%;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+#gymReviewRating span{
+    font-size: 1.5rem;
+    cursor: pointer;
+    
+}
+#gymReview button,#reviewButton{
+    background-color: blue;
+    color: white;
+    padding:0.5rem 1rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    
+}
+#reviewButtonContainer{
+    width: 80%;
+    margin: auto;
+
+}
+#reviewButtonContainer #reviewButton{
+    border-radius: 0;
+    position: relative;
+    right: 1rem; 
+    border-radius: 15px 15px 0 0;
+}
+#availableGymReviews{
+    max-height: 20rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#availableGymReviews div{
+    text-align: left;
+    padding-left: 2rem;
+
+}
+#availableGymReviews img{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    float: left;
+}
+#availableGymReviews h4{
+    position: relative;
+    top:1rem;
+    left: 0.5rem;
+}
 /* leader board */
 #LeaderBoard{
     height: 100vh;
@@ -788,7 +1154,7 @@ Address .city{
 /* user control */
 #userControl{
     margin-top: 3.9rem;
-    margin:2rem;
+    margin:2rem 0;
     overflow-x: hidden;
 }
 #userControl div{
@@ -821,56 +1187,75 @@ Address .city{
     margin: 0.5rem;
     font-size: 2rem;
 }
-#customerInfoSearch span:nth-child(2) input{
-    margin: 0.5rem;
-    height:2rem;
-    border: none;
-    width:15rem;
-    border-radius: 13px;
-    border: 1px solid rgba(0,0,0,0.12);
-    box-shadow: 4px 4px 6px rgba(0,0,0,0.14),-2px -2px 6px rgba(0,0,0,0.14);
-}
-#customerInfoSearch span:nth-child(2) input::placeholder{
-    padding-left: 1rem;
-}
+
 #customers{
-    overflow-x: scroll;
-}
-#customers::-webkit-scrollbar{
-    display: none;
-}
-#customers table{
-    border: 0.1rem solid black;
-    box-shadow: 4px 4px 6px rgba(0,0,0,0.12);
-    background-color: white;
-    text-align: center;
-    margin: auto;
-    border-spacing: 0;
-    color: black;
-    margin-top: 1rem;
-}
-#customers table th,td{
-    width: 12.5rem;
-}
-#customers table thead th{
-    background-color: #036;
-    color: white;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 30rem;
     padding: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
 }
-#customers tr:nth-child(even){
-    background-color: rgba(0,0,0,0.2);
+
+
+#customers .member{
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+    padding:0.5rem 1rem;
+    min-width: 250px;
+    margin: 0.3rem;
 }
-#customers table tbody td button{
-    border: none;
-    border-radius: 12px;
+
+#customers .member div{
+    margin-top: 0.5rem;
+}
+#customers .member div button{
+    background-color: blue;
     color: white;
-    padding: 0.5rem 0.8rem;
-    background-color: orange;
-    box-shadow: 4px 4px 6px rgba(0,0,0,0.12);
+    border-radius: 15px;
+    padding: 0.5rem 0.7rem;
+    border: none;
+    margin: 0.2rem;
     cursor: pointer;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
 }
-#customers table tbody td button:hover{
-    opacity: 0.8;
+#customers .member div.moreInfo{
+    display: none;
+   
+}
+#customers .member div.activeMoreInfo{
+    display: block;
+ }
+
+#customers .member img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 5px solid #036;
+    float: left;
+    margin-right: 1rem;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+#customers .member p span:first-child{
+    float: left;
+    color: blue;
+}
+#customers .member p span:last-child{
+    float: right;
+}
+
+#memberSearchContainer input{
+   height: 2rem;
+   border-radius: 15px;
+   padding-left: 1rem;
+   width: 18rem;
+   border: 2px solid yellow;
+   background-color: transparent;
+   color: white;
+}
+#memberSearchContainer input::placeholder{
+    color: rgba(255,255,255,0.7);
 }
 #addCustomer button{
     margin:0.5rem;
@@ -882,6 +1267,7 @@ Address .city{
     border-radius: 12px;
     cursor: pointer;
 }
+
 #addCustomer button:hover{
    opacity: 0.7; 
 }
@@ -895,11 +1281,36 @@ Address .city{
     #activity .row .col2 table tr{
         font-size: 0.8rem;
     }
-    #activity .row .col2 div{
-        margin: 2%;
-        width: 12%;
+    #activity #scoreBoard{
+        height: 13rem;
     }
+    #activity .row .col2  .tag{
+        background-color: transparent;
+        color: darkblue;
+    }
+    #activity .row .col2 .BarContainer{
+        width:19%;
+        margin: 0.5rem;
+        margin-bottom: 0;
+    }
+    #gymDetail span img{
+    width: 100px;
+    height: 100px;
+      margin: auto;
+      left: 0;
+      right: 0; 
+      bottom: 4rem; 
 
+} 
+
+}
+@media screen and (max-width:662px){
+    #gymAddress{
+        width:90% ;
+    }
+    #openDetail{
+        width: 90%;
+    }
 }
 @media screen and (max-width:900px){
     #rightPart{
@@ -911,6 +1322,7 @@ Address .city{
     #search-section div input{
         width:20rem;
     }
+    
 }
 @media screen and (max-width:1100px){
     #activity .row .col3{

@@ -660,3 +660,70 @@ div#IstSearchOptions p:hover,div#IIndSearchOptions p:hover{
   
  }
 }
+
+
+/* register-login */
+.modal-content{
+  border-radius: 30px;
+}
+.register-login .modal-body{
+  padding:1rem  3rem;
+}
+.register-login .modal-body h4{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bolder;
+}
+.register-login .modal-body p{
+  cursor: pointer;
+  margin: auto;
+  font-size: 0.9rem;
+  width: 80%;
+}
+.register-login label{
+  color:rgba(0,0,0,0.5);
+  position: relative;
+  top:1.4rem;
+}
+
+.register-login input{
+   width:100%;
+   border: none;
+   border-bottom:1px solid grey;
+}
+.register-login input:focus{
+  border-color: red;
+}
+.register-login input::placeholder{
+  position: relative;
+  left:1rem;
+}
+.register-login input:focus,.register-login .close:focus{
+  outline: none;
+}
+.register-login .modal-body button{
+  margin-top: 2rem; 
+  width:100%;
+  border-radius: 30px;
+  background-color: #fa4248;
+  transition: 0.3s ease;
+  color: white;
+}
+.register-login .modal-body button:hover{
+  background-color:red;
+}
+.register-login .close{
+font-weight: bolder;
+color: white;
+}
+.register-login .close:hover{
+  color:black;
+}
+.register-login .modal-header{
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.register-login .modal-header{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+  background-color:rgb(236, 41, 73);
+}

@@ -37,12 +37,17 @@
     </div>
   <main>
    <div id="gym-profile-section">
-       <div>
+       <div style="display: inline-block;">
        <img src="img/gym2.jpg" id="profile" alt=""> 
        <button id="changeGymIcon" >change gym Photo📷</button> 
       <input type="file" id="editGymPhoto" style="display: none;" />
     </div>
-       
+    <div style="display: inline-block;">
+        <img src="img/gym2.jpg" id="profile" alt=""> 
+        <button id="changeGymLogo" >change gym Logo📷</button> 
+       <input type="file" id="editGymLogo" style="display: none;" />
+     </div>
+  
        <div >
         
         <h1>Gym Details</h1> 
@@ -90,10 +95,12 @@
                 <div>
                     <h4>Gallery Image 6</h4>
                     <input type="file">
+                    <h4 style="padding-top: 1rem;">Pay per Workout price</h4>
+                    <input type="text" value="Rs4500">
                 </div> 
                <div>
                    <h4>Address</h4>
-                   <textarea  cols="30" rows="10"></textarea>
+                   <textarea  rows="10" placeholder="plot 21"></textarea>
                </div>
               <div>
                   <h4>Services</h4>
@@ -101,8 +108,97 @@
                   <input type="text" placeholder="Zumba"> <br>
                   <input type="text" placeholder="Yoga">
               </div>
+             
             </div>
-       </div>
+           
+              
+            <div id="openCloseDayTime">
+                <h3>Open and Closing Time</h3>
+                <label for="monday">Monday</label> <br>
+                <select name="" id="">
+                    <option value="">
+                        open
+                    </option>
+                    <option value="">
+                        close
+                    </option>
+                </select>
+                <input type="time" name="" id="" value="08:00">
+               <input type="time" name="" id="" value="22:00">
+               <br>
+                   <label for="tuesday">Tuesday</label> <br>
+                 <select name="" id="">
+                     <option value="">
+                         open
+                     </option>
+                     <option value="">
+                         close
+                     </option>
+                 </select>
+                 <input type="time" name="" id="" value="08:00">
+                 <input type="time" name="" id="" value="22:00">
+                 <br>
+                    <label for="wednesday">Wednesday</label> <br>
+                 <select name="" id="">
+                     <option value="">
+                         open
+                     </option>
+                     <option value="">
+                         close
+                     </option>
+                 </select>
+                 <input type="time" name="" id="" value="08:00">
+                 <input type="time" name="" id="" value="22:00">
+                <br>
+                    <label for="Thursday">Thursday</label> <br>
+                <select name="" id="">
+                     <option value="">
+                         open
+                     </option>
+                     <option value="">
+                         close
+                     </option>
+                 </select>
+                  <input type="time" name="" id="">
+                <input type="time" name="" id="">
+                <br>
+                    <td><label for="Friday">Friday</label> <br>
+                 <select name="" id="">
+                     <option value="">
+                         open
+                     </option>
+                     <option value="">
+                         close
+                     </option>
+                 </select>
+                 <input type="time" name="" id="" value="08:00">
+               <input type="time" name="" id="" value="22:00">
+                 <br>
+                    <label for="saturday">Saturday</label> <br>
+                 <select name="" id="">
+                     <option value="">
+                         open
+                     </option>
+                     <option value="">
+                         close
+                     </option>
+                 </select>
+                 <input type="time" name="" id="" value="08:00">
+                 <input type="time" name="" id="" value="22:00">
+                 <br>
+                <label for="sunday">Sunday</label> <br>
+                 <select name="" id="">
+                     <option value="">
+                         open
+                     </option>
+                     <option value="">
+                         close
+                     </option>
+                 </select>
+                 <input type="time" name="" id="" value="08:00">
+                 <input type="time" name="" id="" value="22:00">
+        </div>
+        </div>
         <button>Update</button>
    </div>
 </main>
