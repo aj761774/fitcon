@@ -1000,7 +1000,7 @@ Address .city{
     color: white;
     text-align: center;
     text-transform: uppercase;
-    background-image: linear-gradient(to right,#808080,#203040);
+
    background-image: url(../img/leaderboard.gif);
    background-size: cover;
    background-position: center;
