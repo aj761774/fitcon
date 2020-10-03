@@ -1,0 +1,54 @@
+/* leader board */
+#LeaderBoard{
+    margin: 0.5rem;
+    overflow-x: hidden;
+    margin-top: 3.9rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+
+   background-image: url(../img/leaderboard.gif);
+   background-size: cover;
+   background-position: center;
+}
+#LeaderBoard::-webkit-scrollbar{
+    display: none;
+}
+
+#LeaderBoard table{
+   
+    border: 0.1rem solid white;
+    box-shadow: 4px 4px 6px rgba(0,0,0,0.12);
+    background-color: transparent;
+    text-align: center;
+    margin: auto;
+    border-spacing: 0;
+    color:black;
+    background-image: url(../img/leaderboard2.gif);
+   background-size: cover;
+   background-position: center;
+}
+
+#trainerLeaderboard{
+    display: none;
+}
+#LeaderBoard table thead{
+    background-color:purple;
+    color: white;
+    font-size: 1.1rem;
+}
+
+#LeaderBoard tr:nth-child(even){
+    background-color: rgba(0,0,0,0.2);
+}
+
+#LeaderBoard th,td{
+  padding:0.5rem 0.5rem;
+  width: 200px;
+}
+#LeaderBoard td:nth-child(1){
+    width: 5rem;
+}
+

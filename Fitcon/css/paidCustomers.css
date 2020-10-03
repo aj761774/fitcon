@@ -1,0 +1,90 @@
+.member{
+    width: 290px;
+  }
+    #paidUserControl{
+    margin:2rem 0;
+    margin-top: 3rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    }
+    #paidUserControl::-webkit-scrollbar{
+    display: none;
+    }
+
+
+
+    #paidcustomers{
+    padding: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    }
+
+    #paidcustomers .member{
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+    padding:0.5rem 1rem;
+    min-width: 250px;
+    margin: 0.3rem;
+    }
+
+    #paidcustomers .member div{
+    margin-top: 0.5rem;
+    }
+    #paidcustomers .member div button{
+    background-color: blue;
+    color: white;
+    border-radius: 15px;
+    padding: 0.5rem 0.7rem;
+    border: none;
+    margin: 0.2rem;
+    cursor: pointer;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+    }
+    #paidcustomers .member div.moreInfo{
+    display: none;
+    
+    }
+    #paidcustomers .member div.activeMoreInfo{
+    display: block;
+    }
+    #paidcustomers .member .moreButton{
+    cursor: pointer;
+    color: blue;
+    }
+    #paidcustomers .member img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 5px solid #036;
+    float: left;
+    margin-right: 1rem;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+    }
+    #paidcustomers .member p span:first-child{
+    float: left;
+    color: blue;
+    }
+    #paidcustomers .member p span:last-child{
+    float: right;
+    }
+
+    #paidMembersearchByNameOrId{
+    height: 2rem;
+    background-color:yellow;
+
+    }
+
+
+    #paidMemberSearchContainer input{
+    height: 2rem;
+    border-radius: 15px;
+    padding-left: 1rem;
+    width: 14rem;
+    border: 2px solid yellow;
+    background-color: transparent;
+    color: white;
+    }
+    #paidMemberSearchContainer input::placeholder{
+    color: rgba(255,255,255,0.7);
+    }
