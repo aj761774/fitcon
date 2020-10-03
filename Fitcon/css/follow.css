@@ -1,0 +1,165 @@
+.follow-following {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(#440844,rgb(97, 50, 97));
+  padding: 4rem 0rem;
+}
+.followhead {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.followhead button {
+  margin: 0px;
+  padding: 5px 10px;
+  /* border-radius: 20px; */
+  border-color: transparent;
+}
+.followhead button:nth-child(1) {
+  padding: 3px 4rem;
+}
+.followhead button:nth-child(2) {
+  margin-left: 2rem;
+}
+
+.followhead button:focus {
+  outline: none;
+  color: white;
+  background-color: rgb(73, 73, 73);
+}
+.follower-container {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  position: relative;
+}
+.following-container{
+    display: none;
+    justify-content: center;
+}
+    
+
+.follower-container .followerlist {
+  /* margin:auto; */
+}
+.followerlistcard {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+  background-color: white;
+  width: fit-content;
+  border-radius: 10px;
+  padding: 0.2rem 0.5rem;
+  margin: 0.5rem auto;
+  /* position: relative; */
+}
+.followerlistcard img {
+  border-radius: 50px;
+  float: left;
+  margin: auto;
+}
+.followerlistcard h5 {
+  justify-content: center;
+  text-align: center;
+
+  padding: 0px;
+  margin-top: 0.8rem;
+  margin-left: 1rem;
+  margin-bottom: 0rem;
+  font-size: 1rem;
+}
+.followerlistcard p {
+  padding: 0px;
+  margin: 0px 1rem;
+  color: rgb(112, 112, 112);
+  text-align: left;
+}
+.followerlistcard button {
+  justify-content: center;
+  text-align: center;
+  margin: 1rem;
+  border-radius: 40px;
+  padding: 2px 5px;
+  border-color: transparent;
+}
+.followerlistcard button:focus{
+    outline: none;
+    background-color: blueviolet;
+    color: white;
+}
+
+
+@media screen and (max-width: 520px) {
+    html {
+      font-size: 85%;
+    }
+    .follower-container,
+    .following-container {
+      width: 80%;
+      margin: auto;
+    }
+    .follower-container .followerlistcard,
+    .following-container .followerlistcard {
+      width: 100%;
+    }
+  }
+@media screen and (max-width: 440px) {
+    html {
+      font-size: 76%;
+    }
+    .follower-container,
+    .following-container {
+      width: 90%;
+      margin: auto;
+    }
+    .follower-container .followerlistcard,
+    .following-container .followerlistcard {
+      width: 100%;
+    }
+  }
+@media screen and (max-width: 370px) {
+    html {
+      font-size: 70%;
+    }
+    .follower-container,
+    .following-container {
+      width: 90%;
+      margin: auto;
+    }
+    .follower-container .followerlistcard,
+    .following-container .followerlistcard {
+      width: 100%;
+    }
+  }
+@media screen and (max-width: 340px) {
+  html {
+    font-size: 62%;
+  }
+  .follower-container,
+  .following-container {
+    width: 90%;
+    margin: auto;
+  }
+  .follower-container .followerlistcard,
+  .following-container .followerlistcard {
+    width:  100%;
+  }
+}
+@media screen and (max-width: 300px) {
+  html {
+    font-size: 50%;
+  }
+  .follower-container,
+  .following-container {
+    width: 90%;
+    margin: auto;
+  }
+  .follower-container .followerlistcard,
+  .following-container .followerlistcard {
+    width:  100%;
+  }
+}
+
+  
