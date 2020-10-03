@@ -7,11 +7,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding-bottom: 1.5rem;
+
     }
     .footer-section{
       padding-top:1rem;
       width: 17rem;
+      padding-bottom: 1rem;
     }
     .footer-section  a{
       text-decoration: none;
