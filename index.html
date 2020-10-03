@@ -37,8 +37,8 @@
                 </li>
                 <li><a href="#">Leaderboard</a></li>
                 <li><a href="#">Fitcoon TV</a></li>
-                <li><a href="#" class="login-form"><button>SIGNUP</button></a></li>
-                <li><a href="#" class="register-form"><button>SIGNIN</button></a></li>
+                <li><a href="#" class="register-form"><button>SIGNUP</button></a></li>
+                <li><a href="#" class="login-form"><button>SIGNIN</button></a></li>
             </ul>
         </nav>
          <!-- NAVIGATION BAR ENDS -->    
@@ -55,8 +55,11 @@
         <button class="close" data-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body">
-        <h4 class="text-center">Welcome</h4>
-        <p class="text-center">Sign up to get started and experience great fitness deals</p>
+        <div id="ownerRegisterUserRegister">
+          <button id="userRegisterButton">User register</button>
+          <button id="OwnerRegisterButton">GymOwner register</button>
+        </div> 
+        <form action="" id="userRegister">
         <label class="email" for="email" >Email</label><br>
         <input class="input-email" type="Email"  name="email"  value=""><br>
         <label class="mobile" for="mobile-no" >Mobile no.</label><br>
@@ -66,6 +69,24 @@
         <label class="confirm-password" for="confirm-password">confirm password</label><br>
         <input class="input-confirm-password" type="password" name="confirm-password"value=""> <br>
         <button type="submit" class="btn"  name="button">SIGN UP</button> <br>
+      </form>
+      <form action="" id="OwnerRegister">
+        <label class="Name" for="Name" >Name</label><br>
+        <input  type="text"  name="name"  value=""><br>
+        <label class="email" for="email" >Email</label><br>
+        <input class="input-email" type="Email"  name="email"  value=""><br>
+        <label class="mobile" for="mobile-no" >Mobile no.</label><br>
+        <input class="input-mobile" type="text"  name="mobileNo"  value=""><br>
+        <label class="password" for="password">password</label><br>
+        <input class="input-password" type="password"  name="" value=""><br>
+        <label class="confirm-password" for="confirm-password">confirm password</label><br>
+        <input class="input-confirm-password" type="password" name="confirm-password"value=""> <br>
+        <label  for="documemt">verification Document</label><br>
+        <input  type="file" style="border:none;margin-top: 1rem;" name="verificationDocument" value="">  <br>
+        <label  for="address" >Address</label><br>
+        <textarea style="margin-top: 1rem;" id="" ></textarea><br>
+        <button type="submit" class="btn"  name="button">SIGN UP</button> <br>
+      </form>
         <P class="login-form mb-4 mt-3 text-center"  name="button">Existing user? <span style="color: red;">click here</span></p>
       </div>
     </div>
@@ -80,12 +101,14 @@
     <button class="close" data-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body">
+        <form action="">
         <label class="email" for="email" >Email</label><br>
         <input class="input-email"  type="Email" name="email"  value=""><br>
         <label class="password" for="password">password</label><br>
         <input class="input-password" type="password" name="" value=""><br>
         <p  class="forget-form mt-3 text-right" >forget password?</p>
         <button type="submit" class="btn" name="button">SIGN IN</button> <br>
+      </form>
         <p class="register-form mt-3 mb-2 text-center" name="button">New user?
          <span style="color: red;">click here</span></p>
       </div>
@@ -101,9 +124,11 @@
     <button class="close" data-dismiss="modal">&times;</button>
       </div>
     <div class="modal-body">
+      <form action="">
     <label class="email" for="email" >Email</label><br>
     <input class="input-email" type="Email" name="email"  value=""><br>
     <button type="submit" class="btn mt-3"  name="button">Send OTP</button> <br>
+    </form>
     <p class="login-form mt-3 mb-4 text-center"  name="button">Back to
      <span style="color: red;">login?</span></p>
       </div>
@@ -657,6 +682,23 @@
     }
 })
 
+$('#OwnerRegisterButton').click(()=>{
+  console.log('clicked');
+  $('#userRegister').hide();
+  $('#OwnerRegister').show();
+  $('#OwnerRegisterButton').css('background-color','White');
+  $('#userRegisterButton').css('background-color','rgba(0,0,0,0.8)');
+  $('#OwnerRegisterButton').css('color','black');
+  $('#userRegisterButton').css('color','white');
+});
+$('#userRegisterButton').click(()=>{
+  $('#OwnerRegister').hide();
+  $('#userRegister').show();
+  $('#OwnerRegisterButton').css('background-color','rgba(0,0,0,0.8)');
+  $('#userRegisterButton').css('background-color','white');
+  $('#OwnerRegisterButton').css('color','white');
+  $('#userRegisterButton').css('color','black');
+});
 const services = document.getElementById('services');
 const serviceOptions = document.getElementById('serviceOptions');
 

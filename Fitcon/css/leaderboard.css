@@ -1,8 +1,8 @@
 /* leader board */
 #LeaderBoard{
-    margin: 0.5rem;
+    margin:3.9rem 0 0 0;
     overflow-x: hidden;
-    margin-top: 3.9rem;
+ 
     padding-top: 2rem;
     padding-bottom: 2rem;
     color: white;

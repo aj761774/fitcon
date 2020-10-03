@@ -1084,7 +1084,7 @@ Address .city{
 /* user control */
 #userControl{
    
-    margin:2rem 0;
+    margin-bottom: 4rem;
     margin-top: 3rem;
     overflow-x: hidden;
     overflow-y: scroll;
